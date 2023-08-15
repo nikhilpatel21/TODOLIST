@@ -8,7 +8,7 @@ const app = express();
 const PORT=process.env.PORT || 3000;
 
 //connect kiya mongodb se
-mongoose.connect("mongodb+srv://admin-nikhil:1234@cluster0.pmt4q9v.mongodb.net/todolistDB",{useNewUrlParser:true});
+mongoose.connect(process.env.MONGODB_URL,{useNewUrlParser:true});
 //mongoose.connect("mongodb://127.0.0.1:27017/todolistDB",{useNewUrlParser:true});
 // schema bnaya
 const itemsSchema={
